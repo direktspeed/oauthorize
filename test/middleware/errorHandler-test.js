@@ -60,7 +60,7 @@ vows.describe('errorHandler').addBatch({
       'should set headers' : function(err, req, res) {
         assert.equal(res.statusCode, 500);
         assert.isUndefined(res._headers['WWW-Authenticate']);
-        assert.equal(res._headers['Content-Type'], 'x-www-form-urlencoded');
+        assert.equal(res._headers['Content-Type'], 'application/x-www-form-urlencoded');
       },
       'should send response' : function(err, req, res, e) {
         assert.equal(res._data, 'oauth_problem=server_error&oauth_problem_advice=something%20went%20wrong');
@@ -97,7 +97,7 @@ vows.describe('errorHandler').addBatch({
       'should set headers' : function(err, req, res) {
         assert.equal(res.statusCode, 401);
         assert.equal(res._headers['WWW-Authenticate'], 'OAuth realm="Clients",oauth_problem="token_rejected",oauth_problem_advice="something%20went%20wrong"');
-        assert.equal(res._headers['Content-Type'], 'x-www-form-urlencoded');
+        assert.equal(res._headers['Content-Type'], 'application/x-www-form-urlencoded');
       },
       'should send response' : function(err, req, res, e) {
         assert.equal(res._data, 'oauth_problem=token_rejected&oauth_problem_advice=something%20went%20wrong');
@@ -134,7 +134,7 @@ vows.describe('errorHandler').addBatch({
       'should set headers' : function(err, req, res) {
         assert.equal(res.statusCode, 400);
         assert.isUndefined(res._headers['WWW-Authenticate']);
-        assert.equal(res._headers['Content-Type'], 'x-www-form-urlencoded');
+        assert.equal(res._headers['Content-Type'], 'application/x-www-form-urlencoded');
       },
       'should send response' : function(err, req, res, e) {
         assert.equal(res._data, 'oauth_problem=parameter_absent&oauth_problem_advice=something%20went%20wrong');
@@ -171,7 +171,7 @@ vows.describe('errorHandler').addBatch({
       'should set headers' : function(err, req, res) {
         assert.equal(res.statusCode, 403);
         assert.equal(res._headers['WWW-Authenticate'], 'OAuth realm="Clients",oauth_problem="permission_denied",oauth_problem_advice="something%20went%20wrong"');
-        assert.equal(res._headers['Content-Type'], 'x-www-form-urlencoded');
+        assert.equal(res._headers['Content-Type'], 'application/x-www-form-urlencoded');
       },
       'should send response' : function(err, req, res, e) {
         assert.equal(res._data, 'oauth_problem=permission_denied&oauth_problem_advice=something%20went%20wrong');
@@ -208,7 +208,7 @@ vows.describe('errorHandler').addBatch({
       'should set headers' : function(err, req, res) {
         assert.equal(res.statusCode, 401);
         assert.equal(res._headers['WWW-Authenticate'], 'OAuth realm="http://sp.example.com/",oauth_problem="token_rejected",oauth_problem_advice="something%20went%20wrong"');
-        assert.equal(res._headers['Content-Type'], 'x-www-form-urlencoded');
+        assert.equal(res._headers['Content-Type'], 'application/x-www-form-urlencoded');
       },
       'should send response' : function(err, req, res, e) {
         assert.equal(res._data, 'oauth_problem=token_rejected&oauth_problem_advice=something%20went%20wrong');

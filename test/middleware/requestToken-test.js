@@ -62,7 +62,7 @@ vows.describe('requestToken').addBatch({
         assert.isNull(err);
       },
       'should set headers' : function(err, req, res) {
-        assert.equal(res._headers['Content-Type'], 'x-www-form-urlencoded');
+        assert.equal(res._headers['Content-Type'], 'application/x-www-form-urlencoded');
         assert.equal(res._headers['Cache-Control'], 'no-store');
         assert.equal(res._headers['Pragma'], 'no-cache');
       },
@@ -109,7 +109,7 @@ vows.describe('requestToken').addBatch({
         assert.isNull(err);
       },
       'should set headers' : function(err, req, res) {
-        assert.equal(res._headers['Content-Type'], 'x-www-form-urlencoded');
+        assert.equal(res._headers['Content-Type'], 'application/x-www-form-urlencoded');
         assert.equal(res._headers['Cache-Control'], 'no-store');
         assert.equal(res._headers['Pragma'], 'no-cache');
       },
@@ -165,7 +165,7 @@ vows.describe('requestToken').addBatch({
         assert.isNull(err);
       },
       'should set headers' : function(err, req, res) {
-        assert.equal(res._headers['Content-Type'], 'x-www-form-urlencoded');
+        assert.equal(res._headers['Content-Type'], 'application/x-www-form-urlencoded');
         assert.equal(res._headers['Cache-Control'], 'no-store');
         assert.equal(res._headers['Pragma'], 'no-cache');
       },
@@ -212,7 +212,7 @@ vows.describe('requestToken').addBatch({
         assert.isNull(err);
       },
       'should set headers' : function(err, req, res) {
-        assert.equal(res._headers['Content-Type'], 'x-www-form-urlencoded');
+        assert.equal(res._headers['Content-Type'], 'application/x-www-form-urlencoded');
         assert.equal(res._headers['Cache-Control'], 'no-store');
         assert.equal(res._headers['Pragma'], 'no-cache');
       },
